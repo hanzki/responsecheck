@@ -40,7 +40,7 @@ def get_ip_nlag_rlag(url):
 
 
 def main(argv):
-    config.read('responsechecker.cfg')
+    config.read(argv[0])
     conn = pymysql.connect(user=config.get('mysqldb', 'user'),
                            passwd=config.get('mysqldb', 'passwd'),
                            host=config.get('mysqldb', 'host'),
